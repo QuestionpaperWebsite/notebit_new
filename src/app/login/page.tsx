@@ -8,11 +8,10 @@ import { BsGithub } from "react-icons/bs";
 export default function LoginPage(){
     const [user,setUser] = React.useState({
         email: "",
-        password: "",
-        username: "",
+        password: ""
     })
 
-    const onSignup = async() =>{
+    const onLogin = async() =>{
 
     }
     return(
@@ -26,10 +25,10 @@ export default function LoginPage(){
                     <div className={style.loginwindow}>
                         <form className={style.signup}>
                             <div className={style.formtext}>Sign in to NOTEBIT</div>
-                            <input type="text" id="" name="" placeholder='Email ID'/><br/>
-                            <input type="text" id="" name="" placeholder='Password'/><br/>
+                            <input type="mail" id="email" value={user.email} onChange={(e)=> setUser({...user, email: e.target.value })} placeholder='Email'/><br/>
+                            <input type="password" id="pass" value={user.password} onChange={(e)=> setUser({...user, password: e.target.value })} placeholder='Password'/><br/>
                             <div className={style.buttonholder}>
-                                <button className={style.buttonsignup}>Sign In</button>
+                                <button className={style.buttonsignup} onClick={onLogin}>Sign In</button>
                             </div>
                             <div className={style.bottomtext}>Don't have an account? <span><Link href="/signup" className={style.oo}>Sign Up</Link></span></div>
                             <div className={style.otherlogon}>Login with<span><FcGoogle/></span><span><BsGithub/></span></div>

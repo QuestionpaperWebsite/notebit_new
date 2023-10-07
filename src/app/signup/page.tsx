@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import style from '../css/loginpage.module.css'
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
-export default function LoginPage(){
+export default function SignupPage(){
     const [user,setUser] = React.useState({
         email: "",
         password: "",
@@ -34,7 +34,7 @@ export default function LoginPage(){
                             <input type="password" id="pass" value={user.password} onChange={(e)=> setUser({...user, password: e.target.value })} placeholder='Password'/><br/>
                             <input type="password" id="cpass" value={user.confirmpass} onChange={(e)=> setUser({...user, confirmpass: e.target.value })} placeholder='Confirm Password'/><br/>
                             <div className={style.buttonholder}>
-                                <button className={style.buttonsignup}>Sign Up</button>
+                                <button className={style.buttonsignup} onClick={onSignup}>Sign Up</button>
                             </div>
                             <div className={style.bottomtext}>Already have an account? <span><Link href="/login" className={style.oo}>Sign In</Link></span></div>
                             <div className={style.otherlogon}>Signup with<span><FcGoogle/></span><span><BsGithub/></span></div>
