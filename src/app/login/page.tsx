@@ -5,15 +5,26 @@ import { useRouter } from 'next/navigation';
 import style from '../css/loginpage.module.css'
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
+import axios from "axios"
 export default function LoginPage(){
+    const router = useRouter();
     const [user,setUser] = React.useState({
         email: "",
         password: ""
     })
 
     const onLogin = async() =>{
-
+        try {
+            const response = await axios.post("/api/users/login", user);
+            console.log("Login success", response.data);
+            router.push("/dashboard");
+            
+        } catch (error:any) {
+            console.log("Login failed", error.message);
+            // toast.error(error.message);
     }
+}
+    
     return(
         <section className={style.loginmain}>
             <div className={style.box}></div>
