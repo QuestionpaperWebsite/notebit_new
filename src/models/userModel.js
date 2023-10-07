@@ -20,11 +20,7 @@ const userSchema = new mongoose.Schema({
        password: {
         type : String,
         required : [true, "Please provide a password"],
-       },
-       confirmpassword: {
-        type : String,
-        required : [true, "Please provide a lastname"],
-       },
+       }
  })
 
  const User  = mongoose.models.Users || mongoose.model("users", userSchema);
