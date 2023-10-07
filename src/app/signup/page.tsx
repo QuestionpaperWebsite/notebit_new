@@ -2,12 +2,12 @@
 import Link from 'next/link';
 import React, { useEffect } from "react";
 import axios from "axios";
+import {Navigate} from 'react-router-dom'
 import { useRouter } from 'next/navigation';
 import style from '../css/loginpage.module.css'
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 import { toast } from "react-hot-toast";
-
 export default function SignupPage(){
 
     const router = useRouter();
@@ -21,16 +21,14 @@ export default function SignupPage(){
 
     })
 
-    const onSignup = async () => {
+    const signupres = async () => {
         try {
-            const response = await axios.post("/api/users/signup", user);
-            console.log("Signup success", response.data);
-            router.push("/login");
-            
-        } catch (error:any) {
-            console.log("Signup failed", error.message);
-            // toast.error(error.message);
-    }
+            const response = await axios.post("api/users/signup", user);
+            router.push("/login")
+        } 
+        catch (error:any) {
+            console.log("Sign up failed", error.message);
+        }
 }
 
     return(
@@ -50,7 +48,7 @@ export default function SignupPage(){
                             <input type="password" id="pass" value={user.password} onChange={(e)=> setUser({...user, password: e.target.value })} placeholder='Password'/><br/>
                             <input type="password" id="cpass" value={user.confirmpass} onChange={(e)=> setUser({...user, confirmpass: e.target.value })} placeholder='Confirm Password'/><br/>
                             <div className={style.buttonholder}>
-                                <button className={style.buttonsignup} onClick={onSignup}>Sign Up</button>
+                                <button className={style.buttonsignup} onClick={signupres}>Sign Up</button>
                             </div>
                             <div className={style.bottomtext}>Already have an account? <span><Link href="/login" className={style.oo}>Sign In</Link></span></div>
                             <div className={style.otherlogon}>Signup with<span><FcGoogle/></span><span><BsGithub/></span></div>
