@@ -31,7 +31,7 @@ export default function LoginPage(){
                             <div className={style.buttonholder}>
                                 <button className={style.buttonsignup}>Sign In</button>
                             </div>
-                            <div className={style.bottomtext}>Don't have an account? <span>Sign Up</span></div>
+                            <div className={style.bottomtext}>Don't have an account? <span><Link href="/signup" className={style.oo}>Sign Up</Link></span></div>
                             <div className={style.otherlogon}>Login with<span><FcGoogle/></span><span><BsGithub/></span></div>
                         </form>
                     </div>

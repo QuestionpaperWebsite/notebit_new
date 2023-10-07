@@ -9,7 +9,9 @@ export default function LoginPage(){
     const [user,setUser] = React.useState({
         email: "",
         password: "",
-        username: "",
+        firstname: "",
+        lastname:"",
+        confirmpass:""
     })
 
     const onSignup = async() =>{
@@ -26,15 +28,15 @@ export default function LoginPage(){
                     <div className={style.loginwindow}>
                         <form className={style.signup}>
                             <div className={style.formtext}>Create Your Account</div>
-                            <input type="text" id="" name="" placeholder='First Name'/><br/>
-                            <input type="text" id="" name="" placeholder='Last Name'/><br/>
-                            <input type="text" id="" name="" placeholder='Email ID'/><br/>
-                            <input type="text" id="" name="" placeholder='Password'/><br/>
-                            <input type="text" id="" name="fname" placeholder='Confirm Password'/><br/>
+                            <input type="text" id="firstname" value={user.firstname} onChange={(e)=> setUser({...user, firstname: e.target.value })} placeholder='First Name'/><br/>
+                            <input type="text" id="lastnamename" value={user.lastname} onChange={(e)=> setUser({...user, lastname: e.target.value })} placeholder='Last Name'/><br/>
+                            <input type="mail" id="email" value={user.email} onChange={(e)=> setUser({...user, email: e.target.value })} placeholder='Email'/><br/>
+                            <input type="password" id="pass" value={user.password} onChange={(e)=> setUser({...user, password: e.target.value })} placeholder='Password'/><br/>
+                            <input type="password" id="cpass" value={user.confirmpass} onChange={(e)=> setUser({...user, confirmpass: e.target.value })} placeholder='Confirm Password'/><br/>
                             <div className={style.buttonholder}>
                                 <button className={style.buttonsignup}>Sign Up</button>
                             </div>
-                            <div className={style.bottomtext}>Already have an account? <span>Sign In</span></div>
+                            <div className={style.bottomtext}>Already have an account? <span><Link href="/login" className={style.oo}>Sign In</Link></span></div>
                             <div className={style.otherlogon}>Signup with<span><FcGoogle/></span><span><BsGithub/></span></div>
                         </form>
                     </div>

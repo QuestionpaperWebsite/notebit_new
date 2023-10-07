@@ -111,9 +111,10 @@
     color: rgba(200, 200, 200, 0.771);
     font-size: 0.8rem;
 }
-.bottomtext span{
+.oo{
    color: rgb(0, 96, 222);
    font-size: 1rem;
+   text-decoration: none;
 }
 .otherlogon{
     position: relative;
