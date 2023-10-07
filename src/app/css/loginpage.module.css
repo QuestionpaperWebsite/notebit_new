@@ -1,0 +1,142 @@
+
+.loginmain{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    filter: blur(200px);
+}
+
+.mainwindow{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainwindowinnercontent{
+    width: 40%;
+    height: 90vh;
+    /* background-color: aquamarine; */
+}
+.logo{
+    width: 100%;
+    height: 25vh;
+    font-size: 4rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-shadow: 0 0 8px white;
+    /* background-color: aqua; */
+}
+.loginwindow{
+    width: 100%;
+    height: 65vh;
+    /* background-color: rgb(5, 247, 167); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup{
+    width: 50%;
+    /* background-color: aqua; */
+    height: 65vh;
+}
+.signup input{
+    width: 90%;
+    height: 4.8vh;
+    margin: 1%;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.signup input::placeholder{
+   color:  rgb(178, 178, 178);
+}
+.buttonholder{
+    width: 100%;
+    height: 5vh;
+    position: relative;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonsignup{
+    width: 80%;
+    height: 5vh;
+    border-radius: 5px;
+    background-color: rgb(0, 96, 222);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    border: none;
+    background-image: -webkit-linear-gradient(30deg, rgb(0, 96, 222) 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #ffffff 50%, transparent 50%);
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 500ms ease-in-out;
+}
+
+.buttonsignup:hover {
+  background-position: 100%;
+  color: #ffffff;
+  text-shadow: 0 0 4px white;
+}
+
+.formtext{
+    color: white;
+    margin-bottom: 5%;
+    font-size: 1.2rem;
+    text-shadow: 0 0 3px white;
+}
+.bottomtext{
+    position: relative;
+    top: 5vh;
+    text-align: center;
+    color: rgba(200, 200, 200, 0.771);
+    font-size: 0.8rem;
+}
+.bottomtext span{
+   color: rgb(0, 96, 222);
+   font-size: 1rem;
+}
+.otherlogon{
+    position: relative;
+    top: 7.5vh;
+    color: rgba(200, 200, 200, 0.771);
+    text-align: center;
+}
+.otherlogon span{
+   font-size: 25px;
+   position: relative;
+   top: 1.2vh;
+   margin-left: 5%;
+}
+.bottomimg{
+    width: 100%;
+    height: 20px;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 90vh;
+    color: #b4b4b480;
+    opacity: 0.2;
+    font-size: 0.6rem;
+}
